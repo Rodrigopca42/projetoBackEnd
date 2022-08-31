@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ProjetoBaeckEndApplication<projeto_baeck_end>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.com.bennytech.projeto_baeck_end.ProjetoBaeckEndApplication",
+            "projectName": "projeto_baeck_end",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
