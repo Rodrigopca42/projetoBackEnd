@@ -1,4 +1,4 @@
-package br.com.bennytech.projeto_baeck_end.Service;
+package br.com.bennytech.projeto_baeck_end.service;
 
 import java.util.List;
 import java.util.Optional;
