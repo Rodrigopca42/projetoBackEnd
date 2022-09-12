@@ -27,12 +27,12 @@ public class ProductController {
 
     @GetMapping
     public List<Product> obterTodos(){
-        return productService.obterTodos();
+        return productService.findAll();
     }
 
    @GetMapping("/{id}") 
    public Optional<Product> obterPorId(@PathVariable Integer id){
-    return productService.obeterPorId(id);
+    return productService.findById(id);
    }
 
     @PostMapping

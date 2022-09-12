@@ -22,8 +22,8 @@ public class ProductService {
      * Retorna uma lista de produtos.
      * @return Lista de produtos.
      */
-    public List<Product> obterTodos(){
-        return productRepository.obterTodos();
+    public List<Product> findAll(){
+        return productRepository.findAll();
     }
     
      /**
@@ -31,8 +31,8 @@ public class ProductService {
      * @param id do produto que será encontrado.
      * @return  Retorna um preduto caso seja encontrado.
      */
-    public Optional<Product> obeterPorId(Integer id){
-        return productRepository.obeterPorId(id);
+    public Optional<Product> findById(Integer id){
+        return productRepository.findById(id);
     }
 
     /**
@@ -41,7 +41,7 @@ public class ProductService {
      * @return Retorna o produto que foi adicionado a lista.
      */
     public Product addProduct(Product product){
-        return productRepository.addProduct(product);
+        return productRepository.save(product);
        
     }
 
@@ -50,7 +50,7 @@ public class ProductService {
      * @param id do produto que será excluido.
      */ 
     public void delete(Integer id){
-        productRepository.delete(id);
+        productRepository.deleteById(id);
      }
 
      /**
@@ -61,7 +61,7 @@ public class ProductService {
     public Product update(Integer id, Product product){
 
         product.setId(id);
-        return productRepository.update(product);
+        return productRepository.saveAndFlush(product);
     }
 
 }
