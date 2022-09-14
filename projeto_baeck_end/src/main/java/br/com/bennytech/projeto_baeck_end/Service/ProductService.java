@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.bennytech.projeto_baeck_end.model.Product;
 import br.com.bennytech.projeto_baeck_end.repository.ProductRepository;
+import br.com.bennytech.projeto_baeck_end.shared.ProductDTO;
 
 
 
@@ -22,7 +23,7 @@ public class ProductService {
      * Retorna uma lista de produtos.
      * @return Lista de produtos.
      */
-    public List<Product> findAll(){
+    public List<ProductDTO> findAll(){
         return productRepository.findAll();
     }
     
@@ -31,7 +32,7 @@ public class ProductService {
      * @param id do produto que será encontrado.
      * @return  Retorna um preduto caso seja encontrado.
      */
-    public Optional<Product> findById(Integer id){
+    public Optional<ProductDTO> findById(Integer id){
         return productRepository.findById(id);
     }
 
@@ -40,7 +41,7 @@ public class ProductService {
      * @param product que será adicionado.
      * @return Retorna o produto que foi adicionado a lista.
      */
-    public Product addProduct(Product product){
+    public ProductDTO addProduct(ProductDTO productDto){
         return productRepository.save(product);
        
     }
@@ -58,7 +59,7 @@ public class ProductService {
       * @param product que será atualizado.
       * @return um produto atualizado.
      */
-    public Product update(Integer id, Product product){
+    public ProductDTO update(Integer id, ProductDTO product){
 
         product.setId(id);
         return productRepository.saveAndFlush(product);

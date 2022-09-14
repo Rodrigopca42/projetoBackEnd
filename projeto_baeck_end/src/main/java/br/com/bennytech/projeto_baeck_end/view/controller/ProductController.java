@@ -1,4 +1,4 @@
-package br.com.bennytech.projeto_baeck_end.controller;
+package br.com.bennytech.projeto_baeck_end.view.controller;
 
 import java.util.List;
 import java.util.Optional;
