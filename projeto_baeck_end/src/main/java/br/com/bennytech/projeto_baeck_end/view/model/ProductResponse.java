@@ -11,9 +11,9 @@ public class ProductResponse {
 
     private Double price;
 
-   // private String note;
+    private String note;
 
-   /* 
+    
    
     public String getName() {
         return name;
@@ -22,7 +22,7 @@ public class ProductResponse {
     public void setName(String name) {
         this.name = name;
     }
-   */
+   
     public Integer getQuantit() {
         return quantit;
     }
@@ -39,11 +39,11 @@ public class ProductResponse {
         this.price = price;
     }
    
-   /* public String getNote() {
+  public String getNote() {
         return note;
     }
    
     public void setNote(String note) {
         this.note = note;
-    } */
+    } 
 }

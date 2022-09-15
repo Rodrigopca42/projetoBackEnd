@@ -92,7 +92,7 @@ public class ProductService {
 
         //Se não encontrar, lança excepotion
       if( product.isEmpty()){
-        throw new ResourceNotFoundException("Não foi possível deletar o produto com o id "+ id + ", produto não foi existe.");
+        throw new ResourceNotFoundException("Não foi possível deletar o produto com o id "+ id + ", produto não existe.");
       }
 
         //Deleta o produto pelo id.
